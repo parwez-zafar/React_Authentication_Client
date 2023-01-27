@@ -16,7 +16,6 @@ const About = () => {
                     'Accept': 'application/json'
                 },
             })
-
             if (res.status === 401)
                 navigate('/login')
             // console.log(res);
@@ -28,12 +27,8 @@ const About = () => {
             else {
                 navigate('/login')
             }
-
-
-
         }
         catch (err) {
-            // navigate("/login")
             console.log("error is " + err)
         }
     }

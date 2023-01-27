@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Contact from './components/Contact';
 import Register from './components/Register';
 import ErrorPage from './components/ErrorPage';
+import Logout from './components/Logout';
 import { Route, Routes } from "react-router-dom";
 
 
@@ -16,9 +17,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="*" component={ErrorPage} />
       </Routes>
 
