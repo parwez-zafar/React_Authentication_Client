@@ -39,17 +39,20 @@ const About = () => {
     // console.log(user);
     return (
         <>
-            {
-                user && <div>
-                    <h2>Name : {user.name}</h2>
-                    <h2>Email : {user.email}</h2>
-                    <h2>Proffesion : {user.work}</h2>
-                    <h2>Phone : {user.phone}</h2>
-                    {/* <h2>{user.password}</h2> */}
+            <center>
+
+                {
+                    user && <div>
+                        <h2>Name : {user.name}</h2>
+                        <h2>Email : {user.email}</h2>
+                        <h2>Proffesion : {user.work}</h2>
+                        <h2>Phone : {user.phone}</h2>
+                        {/* <h2>{user.password}</h2> */}
 
 
-                </div>
-            }
+                    </div>
+                }
+            </center>
 
         </>
     )

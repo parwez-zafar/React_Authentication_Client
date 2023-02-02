@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
+import { UserContext } from "../App";
+
 
 const Login = () => {
+    const { state, dispatch } = useContext(UserContext);
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState('');
@@ -27,6 +30,7 @@ const Login = () => {
                 window.alert('invalid credential');
             }
             else {
+                dispatch({ type: 'USER', payload: true })
                 window.alert('login success');
                 navigate('/');
             }
@@ -63,47 +67,50 @@ const Login = () => {
     }, [])
     return (
         <>
-            <section className="sign-in">
-                <div className="container mt-5">
-                    <div className="singin-content">
-                        <div className="singin-image">
-                            <figure>
+            <center>
 
-                            </figure>
-                            <NavLink className="singin-image-link" to="/register">Create An Account</NavLink>
-                        </div>
-                        <div className="singin-form">
-                            <h2 className="form-title">Login</h2>
+                <section className="sign-in">
+                    <div className="container mt-5">
+                        <div className="singin-content">
+                            <div className="singin-image">
+                                <figure>
 
-                            <div className="register-form" id='register-form'>
+                                </figure>
+                                <NavLink className="singin-image-link" to="/register">Create An Account</NavLink>
+                            </div>
+                            <div className="singin-form">
+                                <h2 className="form-title">Login</h2>
 
-                                <div className="form-group">
-                                    <label htmlFor="email">
+                                <div className="register-form" id='register-form'>
 
-                                    </label>
-                                    <input type="text" name='email' id='email' autoComplete='off' placeholder='Your Email' value={email} onChange={(e) => {
-                                        setEmail(e.target.value)
-                                    }} />
-                                </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email">
 
-                                <div className="form-group">
-                                    <label htmlFor="name">
+                                        </label>
+                                        <input type="text" name='email' id='email' autoComplete='off' placeholder='Your Email' value={email} onChange={(e) => {
+                                            setEmail(e.target.value)
+                                        }} />
+                                    </div>
 
-                                    </label>
-                                    <input type="password" name='password' id='password' autoComplete='off' placeholder='Your Password' value={password} onChange={(e) => {
-                                        setPassword(e.target.value)
-                                    }} />
-                                </div>
+                                    <div className="form-group">
+                                        <label htmlFor="name">
+
+                                        </label>
+                                        <input type="password" name='password' id='password' autoComplete='off' placeholder='Your Password' value={password} onChange={(e) => {
+                                            setPassword(e.target.value)
+                                        }} />
+                                    </div>
 
 
-                                <div className="form-group form-button">
-                                    <button type="button" name='singin' id='singin' className='form-submit' onClick={loginUser} >Log In</button>
+                                    <div className="form-group form-button">
+                                        <button type="button" name='singin' id='singin' className='form-submit' onClick={loginUser} >Log In</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </center>
         </>
     )
 }

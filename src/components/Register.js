@@ -79,77 +79,80 @@ const Register = () => {
 
     return (
         <>
-            <section className="signup">
-                <div className="container mt-5">
-                    <div className="signup-content">
-                        <div className="signup-form">
-                            <h2 className="form-title">sign up</h2>
+            <center>
 
-                            <div className="register-form" id='register-form'>
-                                <div className="form-group">
-                                    <label htmlFor="name">
+                <section className="signup">
+                    <div className="container mt-5">
+                        <div className="signup-content">
+                            <div className="signup-form">
+                                <h2 className="form-title">sign up</h2>
 
-                                    </label>
-                                    <input type="text" name='name' id='name' autoComplete='off' placeholder='Your Name'
-                                        value={user.name} onChange={handlesInputs} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">
+                                <div className="register-form" id='register-form'>
+                                    <div className="form-group">
+                                        <label htmlFor="name">
 
-                                    </label>
-                                    <input type="text" name='email' id='email' autoComplete='off' placeholder='Your Email'
-                                        value={user.email} onChange={handlesInputs} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name">
+                                        </label>
+                                        <input type="text" name='name' id='name' autoComplete='off' placeholder='Your Name'
+                                            value={user.name} onChange={handlesInputs} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email">
 
-                                    </label>
-                                    <input type="text" name='phone' id='phone' autoComplete='off' placeholder='Your Phone'
-                                        value={user.phone} onChange={handlesInputs}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name">
+                                        </label>
+                                        <input type="text" name='email' id='email' autoComplete='off' placeholder='Your Email'
+                                            value={user.email} onChange={handlesInputs} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="name">
 
-                                    </label>
-                                    <input type="text" name='work' id='work' autoComplete='off' placeholder='Your Profession'
-                                        value={user.work} onChange={handlesInputs} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name">
+                                        </label>
+                                        <input type="text" name='phone' id='phone' autoComplete='off' placeholder='Your Phone'
+                                            value={user.phone} onChange={handlesInputs}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="name">
 
-                                    </label>
-                                    <input type="password" name='password' id='password' autoComplete='off' placeholder='Your Password'
-                                        value={user.password} onChange={handlesInputs} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name">
+                                        </label>
+                                        <input type="text" name='work' id='work' autoComplete='off' placeholder='Your Profession'
+                                            value={user.work} onChange={handlesInputs} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="name">
 
-                                    </label>
-                                    <input type="password" name='confirm_password' id='confirm_password' autoComplete='off' placeholder='Confirm Password'
-                                        value={user.confirm_password} onChange={handlesInputs} />
-                                </div>
+                                        </label>
+                                        <input type="password" name='password' id='password' autoComplete='off' placeholder='Your Password'
+                                            value={user.password} onChange={handlesInputs} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="name">
 
-                                <div className="form-group form-button">
-                                    <button type="button" name='signup' id='signup' className='form-submit' onClick={postDate} >Register</button>
+                                        </label>
+                                        <input type="password" name='confirm_password' id='confirm_password' autoComplete='off' placeholder='Confirm Password'
+                                            value={user.confirm_password} onChange={handlesInputs} />
+                                    </div>
+
+                                    <div className="form-group form-button">
+                                        <button type="button" name='signup' id='signup' className='form-submit' onClick={postDate} >Register</button>
+                                    </div>
+
                                 </div>
 
                             </div>
+                            <div className="signup-image">
+                                <figure>
+
+                                </figure>
+
+                                <NavLink className="signup-image-link" to="/login">I Am Already Register</NavLink>
+                            </div>
+
 
                         </div>
-                        <div className="signup-image">
-                            <figure>
-
-                            </figure>
-
-                            <NavLink className="signup-image-link" to="/login">I Am Already Register</NavLink>
-                        </div>
-
 
                     </div>
-
-                </div>
-            </section>
+                </section>
+            </center>
         </>
     )
 }
