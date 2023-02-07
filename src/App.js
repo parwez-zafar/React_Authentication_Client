@@ -9,6 +9,8 @@ import ErrorPage from './components/ErrorPage';
 import Logout from './components/Logout';
 import { Route, Routes } from "react-router-dom";
 import { initialState, reducer } from '../src/reducer/UseReducer';
+import './App.css';
+
 
 
 
