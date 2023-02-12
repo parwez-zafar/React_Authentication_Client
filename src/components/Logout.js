@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../App';
 
 const Logout = () => {
-    const { state, dispacth } = useContext(UserContext);
+    const { state, dispatch } = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const Logout = () => {
 
 
             navigate('/login');
-            dispacth({ type: 'USER', payload: false })
+            dispatch({ type: 'USER', payload: false })
 
 
             if (res.status !== 200) {

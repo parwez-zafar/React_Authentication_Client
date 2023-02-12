@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HomeContent from './HomeContent';
-
+import { UserContext } from "../App";
 
 
 
 
 const Home = () => {
-
+    const { state, dispatch } = useContext(UserContext);
     const [userName, setUserName] = useState('');
     const [show, setShow] = useState(false);
     const HomePage = async () => {
@@ -21,6 +21,7 @@ const Home = () => {
             })
             const data = await res.json();
             if (res.status === 200) {
+                dispatch({ type: 'USER', payload: true })
                 setUserName(data.name);
                 setShow(true);
             }

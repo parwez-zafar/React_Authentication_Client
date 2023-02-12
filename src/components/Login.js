@@ -10,6 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
 
+
     const loginUser = async (event) => {
         // event.preventDefault();
 
@@ -26,6 +27,9 @@ const Login = () => {
 
             })
             const data = await res.json();
+            if (!data) {
+
+            }
             if (res.status === 400 || !data) {
                 window.alert('invalid credential');
             }

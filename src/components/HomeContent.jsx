@@ -40,7 +40,7 @@ const HomeContent = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, culpa deleniti exercitationem ipsa
                         veritatis minus similique?</p>
                 </div>
-                <div className="box" id="box-3"><img src={is1} alt="Our Services" />
+                <div className="box" id="box-3"><img src={is3} alt="Our Services" />
                     <h1>Tech Marketing</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, culpa deleniti exercitationem ipsa
                         veritatis minus similique? Unde atque voluptatibus consectetur voluptatum!</p>
